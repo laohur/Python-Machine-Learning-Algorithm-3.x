@@ -30,4 +30,4 @@ if __name__ == "__main__":
     predict = lwlr(feature, label, 0.002)
     m = np.shape(predict)[0]
     for i in range(m):
-        print((feature[i, 1], predict[i]))
+        print(feature[i, 1], predict[i])

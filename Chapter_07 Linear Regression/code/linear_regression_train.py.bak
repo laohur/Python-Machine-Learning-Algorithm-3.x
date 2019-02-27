@@ -108,7 +108,7 @@ def newton(feature, label, iterMax, sigma, delta):
         m = get_min_m(feature, label, sigma, delta, d, w, g)  # 得到最小的m
         w = w + pow(sigma, m) * d
         if it % 10 == 0:
-            print(("\t---- itration: " + str(it) + " , error: " + str(get_error(feature, label , w)[0, 0])))
+            print("\t---- itration: " + str(it) + " , error: " + str(get_error(feature, label , w)[0, 0]))
         it += 1       
     return w
 

@@ -81,7 +81,7 @@ def bfgs(feature, label, lam, maxCycle):
     Bk = np.eye(n)  
     k = 1  
     while (k < maxCycle):
-        print(("\titer: " + str(k) + "\terror: " + str(get_error(feature, label, w0))))
+        print("\titer: " + str(k) + "\terror: " + str(get_error(feature, label, w0)))
         gk = get_gradient(feature, label, w0, lam)  # 计算梯度  
         dk = np.mat(-np.linalg.solve(Bk, gk))  
         m = 0  
@@ -130,7 +130,7 @@ def lbfgs(feature, label, lam, maxCycle, m=10):
     dk = -H0 * gk
     # 2、迭代
     while (k < maxCycle):
-        print(("iter: " + str(k) + "\terror: " + str(get_error(feature, label, w0))))
+        print("iter: " + str(k) + "\terror: " + str(get_error(feature, label, w0)))
         m = 0
         mk = 0
         gk = get_gradient(feature, label, w0, lam)

@@ -83,7 +83,7 @@ def kmeans(data, k, centroids):
                 try:
                     centroids[j, z] = sum_all[0, z] / r
                 except:
-                    print(" r is zero")   
+                    print " r is zero"   
     return subCenter
 
 def save_result(file_name, source):

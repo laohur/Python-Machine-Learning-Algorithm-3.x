@@ -57,7 +57,7 @@ def gradientAscent(feature_data, label_data, k, maxCycle, alpha):
     while i <= maxCycle:
         err = np.exp(feature_data * weights)
         if i % 1000 == 0:
-            print(("\t-----iter: "+ str(i) + ", cost: " + str(cost(err, label_data))))
+            print("\t-----iter: "+ str(i) + ", cost: " + str(cost(err, label_data)))
         rowsum = -err.sum(axis=1)
         rowsum = rowsum.repeat(k, axis=1)
         err = err / rowsum

@@ -50,8 +50,8 @@ def lr_train_bgd(feature, label, maxCycle, alpha):
         h = sig(feature * w)  # 计算Sigmoid值
         err = label - h
         if i % 100 == 0:
-            print(("\t---------iter=" + str(i) + \
-            " , train error rate= " + str(error_rate(h, label))))
+            print("\t---------iter=" + str(i) + \
+            " , train error rate= " + str(error_rate(h, label)))
         w = w + alpha * feature.T * err  # 权重修正
     return w
 
